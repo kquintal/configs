@@ -5,6 +5,11 @@ end
 #  Set greeting
 set fish_greeting "🚀 Welcome back, Classicus 🚀"
 
+# Make sure Path for cargo is set
+if not contains ~/.cargo/bin $PATH
+    set -gx PATH $PATH ~/.cargo/bin
+end
+
 # >>> NVM Initialization >>>
 # !! This loads nvm  config into fish
 eval "$(/opt/homebrew/bin/brew shellenv)"
