@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 #  Set greeting
-set fish_greeting "🚀 Welcome back, Classicus 🚀"
+set fish_greeting "🚀 Welcome back, $USER 🚀"
 
 # Make sure Path for cargo is set
 if not contains ~/.cargo/bin $PATH
@@ -11,3 +11,4 @@ if not contains ~/.cargo/bin $PATH
 end
 
 starship init fish | source
+set -gx PATH $HOME/.local/bin $PATH
