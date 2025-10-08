@@ -12,3 +12,4 @@ end
 
 starship init fish | source
 set -gx PATH $HOME/.local/bin $PATH
+set -gx PATH "/opt/homebrew/opt/node@22/bin" $PATH
