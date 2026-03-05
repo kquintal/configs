@@ -1,4 +1,3 @@
-function gbc --wraps='git branch -D $(git branch | egrep -v "master")' --wraps='git branch | grep -v master | xargs git branch -D' --description 'alias gbc=git branch | grep -v master | xargs git branch -D'
-  git branch | grep -v master | xargs git branch -D $argv
-        
+function gbc --description 'Delete all local branches except main and master'
+  git branch | grep -v -E 'main|master' | xargs git branch -D $argv
 end
