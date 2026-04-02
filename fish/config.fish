@@ -14,5 +14,11 @@ starship init fish | source
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH "/opt/homebrew/opt/node@22/bin" $PATH
 
-# OpenClaw Completion
-source "/Users/classicus/.openclaw/completions/openclaw.fish"
+# Source local config (not tracked in git)
+if test -f ~/.config/fish/local.fish
+    source ~/.config/fish/local.fish
+end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

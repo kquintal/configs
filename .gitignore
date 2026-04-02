@@ -1,1 +1,4 @@
-.DS_Store
+**/.DS_Store
+*.save
+fish/fish_variables
+fish/local.fish

@@ -1,4 +1,4 @@
 function streamling
-  # Run the streamling binary from Documents/Goldsky/tools/streamling-cli
-  $HOME/Documents/Goldsky/tools/streamling-cli/streamling $argv
+  # Run the streamling binary from $WORK_HOME/tools/streamling-cli
+  $WORK_HOME/tools/streamling-cli/streamling $argv
 end
