@@ -10,6 +10,8 @@ if not contains ~/.cargo/bin $PATH
     set -gx PATH $PATH ~/.cargo/bin
 end
 
+set -gx WORK_HOME "$HOME/Documents/Goldsky"
+
 starship init fish | source
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH "/opt/homebrew/opt/node@22/bin" $PATH
