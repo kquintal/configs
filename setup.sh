@@ -32,6 +32,12 @@ if [ ! -d "$HOME/.local/share/omf" ]; then
   curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 fi
 
+# --- TPM (Tmux Plugin Manager) ---
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  echo "Installing TPM..."
+  git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
+
 # --- Symlinks ---
 echo "Symlinking config files..."
 
@@ -59,5 +65,9 @@ if [ "$SHELL" != "$FISH_PATH" ]; then
   echo "Setting fish as default shell..."
   chsh -s "$FISH_PATH"
 fi
+
+# --- Install tmux plugins via TPM ---
+echo "Installing tmux plugins..."
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"
 
 echo "Done! Restart your terminal to use the new config."
