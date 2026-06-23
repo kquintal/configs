@@ -14,7 +14,7 @@ chmod +x setup.sh
 This will:
 - Install [Homebrew](https://brew.sh) (if not present)
 - Install all packages from the `Brewfile`
-- Install Rust (via `rustup`), Bun, and Oh My Fish
+- Install Rust (via `rustup`) and Bun
 - Symlink config files to `~/.config/`
 - Set fish as the default shell
 

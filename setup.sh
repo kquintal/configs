@@ -26,12 +26,6 @@ if ! command -v bun &>/dev/null; then
   curl -fsSL https://bun.sh/install | bash
 fi
 
-# --- Oh My Fish ---
-if [ ! -d "$HOME/.local/share/omf" ]; then
-  echo "Installing Oh My Fish..."
-  curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-fi
-
 # --- TPM (Tmux Plugin Manager) ---
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   echo "Installing TPM..."
